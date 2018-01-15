@@ -1,5 +1,5 @@
 # Lunar lander con html, css y javascript
-**Enlace:** https://rawgit.com/alexgaya/lunar-landing-javascript/mi-proyecto/index.html  
+**Enlace:** https://rawgit.com/alexgaya/lunar-landing-javascript/master/index.html
 **Autor:** Alejandro Gayá González  
 **Descripción:** Es un proyecto de la asignatura lenguaje de marcas, en el cual debemos desarrollar todas las funciones necesarias con javascript para que el juego Lunar lander funcione correctamente.
 
