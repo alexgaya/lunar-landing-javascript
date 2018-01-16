@@ -175,7 +175,6 @@ function actualizarFuel(){
 	if (c < 0 ){
 		c = 0;
 		aterrizado = true;
-		motorOff();
 	}
 	combustible.style.width = c+"%";
 	combustiblemvl.style.height = c+"%";
