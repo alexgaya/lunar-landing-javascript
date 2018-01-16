@@ -7,7 +7,7 @@ var timerFuel=null;
 var y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 var v = 0;
 var c = 100;
-var a = g; //la aceleraciÛn cambia cuando se enciende el motor de a=g a a=-g (simplificado)
+var a = g; //la aceleraci√≥n cambia cuando se enciende el motor de a=g a a=-g (simplificado)
 var aterrizado = false;
 //MARCADORES
 var velocidad = null;
@@ -17,7 +17,7 @@ var combustiblemvl = null;
 var maxv = null;
 var mvl = false;
 var nave = null;
-//al cargar por completo la p·gina...
+//al cargar por completo la p√°gina...
 window.onload = function(){
 	
 	velocidad = document.getElementById("velocidad");
@@ -27,7 +27,7 @@ window.onload = function(){
 	nave = document.getElementById("nave");
 
 	
-	//definiciÛn de eventos
+	//definici√≥n de eventos
 	//BOTONES EVENTOS
 
 	document.getElementById("acercaDe").onclick = function(){
@@ -86,11 +86,11 @@ window.onload = function(){
 		}
 	}
 	window.onkeyup=motorOff;
-	//Empezar a mover la nave justo despuÈs de cargar la p·gina
+	//Empezar a mover la nave justo despu√©s de cargar la p√°gina
 	start();
 }
 
-//DefiniciÛn de funciones
+//Definici√≥n de funciones
 function start(){
 	//cada intervalo de tiempo mueve la nave
 	timer=setInterval(function(){ moverNave(); }, dt*1000);
@@ -152,9 +152,9 @@ function hideBlowUp(){
 }
 function motorOn(){	
 	if(!aterrizado){
-		//el motor da aceleraciÛn a la nave
+		//el motor da aceleraci√≥n a la nave
 		a=-g;
-		//mientras el motor estÈ activado gasta combustible
+		//mientras el motor est√© activado gasta combustible
 		if (timerFuel==null){
 		document.getElementById("imgNave").src = "img/nave2.gif";
 		timerFuel=setInterval(function(){ actualizarFuel(); }, 10);
@@ -175,6 +175,7 @@ function actualizarFuel(){
 	if (c < 0 ){
 		c = 0;
 		aterrizado = true;
+		motorOff();
 	}
 	combustible.style.width = c+"%";
 	combustiblemvl.style.height = c+"%";
@@ -188,7 +189,7 @@ function reset(){
 	y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 	v = 0;
 	c = 100;
-	a = g; //la aceleraciÛn cambia cuando se enciende el motor de a=g a a=-g (simplificado)
+	a = g; //la aceleraci√≥n cambia cuando se enciende el motor de a=g a a=-g (simplificado)
 	maxv = v;
 	aterrizado = false;
 	document.getElementById("nave").style.top = y+"%";
@@ -254,7 +255,7 @@ function resetMvl(){
 	y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 	v = 0;
 	c = 100;
-	a = g; //la aceleraciÛn cambia cuando se enciende el motor de a=g a a=-g (simplificado)
+	a = g; //la aceleraci√≥n cambia cuando se enciende el motor de a=g a a=-g (simplificado)
 	maxv = v;
 	aterrizado = false;
 	document.getElementById("nave").style.top = y+"%";
